@@ -7,7 +7,16 @@
 
 A modern, high-performance, and feature-rich WhatsApp Clone built using **Spring Boot**, **MySQL**, and **WebSockets**. This application replicates the core functionalities of WhatsApp Web with a focus on real-time communication and a sleek dark-mode aesthetic.
 
-## 🚀 Features
+## � Screenshots
+
+| Login Page | Registration Page |
+|------------|-------------------|
+| ![Login](./Snapshots/login.png) | ![Register](./Snapshots/Register.png) |
+
+### 💬 Main Chat Interface
+![Chat Interface](./Snapshots/image.png)
+
+## �🚀 Features
 
 ### 💬 Real-Time Messaging
 - **Instant Communication**: Powered by WebSockets for seamless, instant message delivery.
