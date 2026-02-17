@@ -21,20 +21,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function setupEmojiPicker() {
     const button = document.querySelector('#emojiBtn');
-    const picker = new EmojiButton({
-        position: 'top-start',
-        theme: 'dark',
-        autoHide: false
+    const container = document.getElementById('emojiPickerContainer');
+    const picker = container.querySelector('emoji-picker');
+    const input = document.getElementById('messageInput');
+
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        container.style.display = container.style.display === 'none' ? 'block' : 'none';
+
+        // Adjust theme dynamically if needed (library defaults to light/dark based on system but we can force it)
+        picker.classList.toggle('dark', true); // WhatsApp clone is dark mode
     });
 
-    picker.on('emoji', emoji => {
-        const input = document.getElementById('messageInput');
+    picker.addEventListener('emoji-click', event => {
+        const emoji = event.detail.unicode;
         input.value += emoji;
         input.focus();
+        // Optional: hide picker after selection
+        // container.style.display = 'none';
     });
 
-    button.addEventListener('click', () => {
-        picker.togglePicker(button);
+    // Close picker when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!container.contains(e.target) && e.target !== button && !button.contains(e.target)) {
+            container.style.display = 'none';
+        }
     });
 }
 

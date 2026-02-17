@@ -181,6 +181,10 @@
                                             <input type="hidden" id="replyToMessageId" value="">
                                         </div>
                                         <div class="chat-input-container">
+                                            <div id="emojiPickerContainer"
+                                                style="display: none; position: absolute; bottom: 70px; left: 10px; z-index: 1000;">
+                                                <emoji-picker class="light"></emoji-picker>
+                                            </div>
                                             <button class="icon-btn" id="emojiBtn"><i class="far fa-smile"></i></button>
                                             <button class="icon-btn"><i class="fas fa-plus"></i></button>
                                             <div class="input-wrapper">
@@ -204,12 +208,11 @@
                                 accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.txt">
 
                             <!-- Scripts -->
-                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                             <script
                                 src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
                             <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-                            <script
-                                src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.4/dist/index.min.js"></script>
+                            <script type="module"
+                                src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.21.2/index.js"></script>
                             <script src="/js/chat.js"></script>
                 </body>
 

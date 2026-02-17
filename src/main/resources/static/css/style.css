@@ -514,6 +514,30 @@ body {
     font-size: 15px;
 }
 
+/* Emoji Picker Customization */
+emoji-picker {
+    --num-columns: 8;
+    --emoji-size: 1.5rem;
+    --background: var(--bg-secondary);
+    --border-color: var(--border);
+    --outline-color: var(--accent);
+    --indicator-color: var(--accent);
+    --category-font-size: 0.8rem;
+    width: 320px;
+    height: 400px;
+}
+
+emoji-picker.dark {
+    --background: #202c33;
+    --border-color: #233138;
+}
+
+#emojiPickerContainer {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 /* Modals */
 .modal {
     background: var(--modal-bg);
